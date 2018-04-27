@@ -5,6 +5,7 @@
     <Platforms>x64</Platforms>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
+    <Version>1.0.0</Version>
     <Authors>AeonLucid</Authors>
     <Company>AeonLucid</Company>
     <Description>An NetStandard compatible steamworks interop library. MAKE SURE YOU ALSO INSTALL THE PACKAGE "SteamworksSharp".</Description>
@@ -12,7 +13,6 @@
     <PackageProjectUrl>https://github.com/AeonLucid/SteamworksSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AeonLucid/SteamworksSharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageLicenseUrl>https://github.com/AeonLucid/SteamworksSharp/LICENSE</PackageLicenseUrl>
     <PackageTags>Steam Steamworks Netstandard</PackageTags>
   </PropertyGroup>
 
