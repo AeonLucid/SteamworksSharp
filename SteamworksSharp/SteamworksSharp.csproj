@@ -1,8 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFrameworks>netstandard1.1;netstandard2.0</TargetFrameworks>
     <Platforms>x86;x64</Platforms>
+    <Authors>AeonLucid</Authors>
+    <Company>AeonLucid</Company>
+    <Description>An NetStandard compatible steamworks interop library.</Description>
+    <Copyright>AeonLucid</Copyright>
+    <PackageProjectUrl>https://github.com/AeonLucid/SteamworksSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AeonLucid/SteamworksSharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/AeonLucid/SteamworksSharp/LICENSE</PackageLicenseUrl>
+    <PackageTags>Steam Steamworks Netstandard</PackageTags>
   </PropertyGroup>
 
 </Project>

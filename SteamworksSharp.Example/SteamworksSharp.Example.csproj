@@ -6,14 +6,6 @@
     <Platforms>x64</Platforms>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\SteamworksSharp.Native.Linux_x64\SteamworksSharp.Native.Linux_x64.csproj" />
     <ProjectReference Include="..\SteamworksSharp.Native.Windows_x64\SteamworksSharp.Native.Windows_x64.csproj" />
