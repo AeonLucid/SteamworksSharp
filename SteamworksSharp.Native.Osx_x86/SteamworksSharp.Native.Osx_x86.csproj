@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.5;netstandard1.6;netstandard2.0;net452</TargetFrameworks>
+    <Version>1.0.0</Version>
+    <Authors>AeonLucid</Authors>
+    <Company>AeonLucid</Company>
+    <Description>An NetStandard compatible steamworks interop library. MAKE SURE YOU ALSO INSTALL THE PACKAGE "SteamworksSharp".</Description>
+    <Copyright>AeonLucid</Copyright>
+    <PackageProjectUrl>https://github.com/AeonLucid/SteamworksSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AeonLucid/SteamworksSharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Steam Steamworks</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="libsteam_api.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SteamworksSharp.Native\SteamworksSharp.Native.csproj" />
+  </ItemGroup>
+
+</Project>
