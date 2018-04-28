@@ -23,6 +23,7 @@ environment:
 
 before_build:
   - appveyor-retry dotnet restore -v Minimal
+  - appveyor-retry dotnet restore "SteamworksSharp.Native" -v Minimal
   - appveyor-retry dotnet restore "SteamworksSharp.Native.Linux_x64" -v Minimal
   - appveyor-retry dotnet restore "SteamworksSharp.Native.Linux_x86" -v Minimal
   - appveyor-retry dotnet restore "SteamworksSharp.Native.Windows_x64" -v Minimal
@@ -30,6 +31,7 @@ before_build:
 
 build_script:
   - dotnet build "SteamworksSharp" -c Release
+  - dotnet build "SteamworksSharp.Native" -c Release
   - dotnet build "SteamworksSharp.Native.Linux_x64" -c Release
   - dotnet build "SteamworksSharp.Native.Linux_x86" -c Release
   - dotnet build "SteamworksSharp.Native.Windows_x64" -c Release
@@ -37,6 +39,7 @@ build_script:
   
 after_build:
   - dotnet pack "SteamworksSharp" -c Release --no-build -o artifacts
+  - dotnet pack "SteamworksSharp.Native" -c Release --no-build -o artifacts
   - dotnet pack "SteamworksSharp.Native.Linux_x64" -c Release --no-build -o artifacts
   - dotnet pack "SteamworksSharp.Native.Linux_x86" -c Release --no-build -o artifacts
   - dotnet pack "SteamworksSharp.Native.Windows_x64" -c Release --no-build -o artifacts
@@ -48,6 +51,7 @@ artifacts:
 only_commits:
   files:
     - SteamworksSharp/
+    - SteamworksSharp.Native/
     - SteamworksSharp.Native.Linux_x86/
     - SteamworksSharp.Native.Linux_x64/
     - SteamworksSharp.Native.Windows_x86/
