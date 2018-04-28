@@ -20,7 +20,7 @@ namespace SteamworksSharp.Native
 
         private static readonly List<INativeLibrary> NativeLibraries = new List<INativeLibrary>();
 
-        private static string CurrentLocation { get; } = Path.GetDirectoryName(typeof(SteamNative).GetTypeInfo().Assembly.Location);
+        private static string CurrentLocation { get; } = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
         public static void Initialize()
         {
