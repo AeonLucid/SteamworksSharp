@@ -19,7 +19,7 @@ namespace SteamworksSharp
             // Write app id to file if set.
             if (appId > 0)
             {
-                var currentLocation = Path.GetDirectoryName(typeof(SteamApi).GetTypeInfo().Assembly.Location);
+                var currentLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
                 File.WriteAllText(Path.Combine(currentLocation, "steam_appid.txt"), $"{appId}", Encoding.ASCII);
             }
