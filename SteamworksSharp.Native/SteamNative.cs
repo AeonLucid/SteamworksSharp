@@ -14,7 +14,8 @@ namespace SteamworksSharp.Native
             "SteamworksSharp.Native.Linux_x86",
             "SteamworksSharp.Native.Linux_x64",
             "SteamworksSharp.Native.Windows_x86",
-            "SteamworksSharp.Native.Windows_x64"
+            "SteamworksSharp.Native.Windows_x64",
+            "SteamworksSharp.Native.Osx_x86"
         };
 
         private static readonly List<INativeLibrary> NativeLibraries = new List<INativeLibrary>();
@@ -33,12 +34,9 @@ namespace SteamworksSharp.Native
         private static void FindNativeLibraries()
         {
 
-            foreach (var nativeLibraryLocation in Directory.EnumerateFiles(CurrentLocation, "*.dll", SearchOption.TopDirectoryOnly))
+            foreach (var nativeLibraryName in NativeLibraryNames)
             {
-                var nativeLibraryName = Path.GetFileNameWithoutExtension(nativeLibraryLocation);
-
-                // Check if dll name is valid.
-                if (NativeLibraryNames.Contains(nativeLibraryName))
+                try
                 {
                     // Load the assembly.
                     var loadedAssembly = Assembly.Load(new AssemblyName(nativeLibraryName));
@@ -50,12 +48,24 @@ namespace SteamworksSharp.Native
                         NativeLibraries.Add((INativeLibrary)Activator.CreateInstance(libraryType));
                     }
                 }
+                catch (FileNotFoundException)
+                {
+                    // ignore
+                }
             }
         }
 
         private static void WriteNativeLibrary()
         {
             var currentArchitecture = RuntimeInformation.ProcessArchitecture;
+
+#if NET452 || NET46 || NET461 || NET462 || NET47 || NET471
+            if (Environment.Is64BitProcess)
+            {
+                currentArchitecture = Architecture.X64;
+            }
+#endif
+
             var currentPlatform = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
                 ? OSPlatform.Windows
                 : (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)
