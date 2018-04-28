@@ -9,13 +9,8 @@
   <ItemGroup>
     <ProjectReference Include="..\SteamworksSharp.Native.Linux_x64\SteamworksSharp.Native.Linux_x64.csproj" />
     <ProjectReference Include="..\SteamworksSharp.Native.Windows_x64\SteamworksSharp.Native.Windows_x64.csproj" />
+    <ProjectReference Include="..\SteamworksSharp.Native\SteamworksSharp.Native.csproj" />
     <ProjectReference Include="..\SteamworksSharp\SteamworksSharp.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="steam_appid.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

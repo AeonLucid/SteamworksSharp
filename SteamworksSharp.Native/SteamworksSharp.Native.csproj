@@ -10,19 +10,11 @@
     <PackageProjectUrl>https://github.com/AeonLucid/SteamworksSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AeonLucid/SteamworksSharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>Steam Steamworks</PackageTags>
+    <PackageTags>Steam Steamworks Netstandard</PackageTags>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
     <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="libsteam_api.so" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\SteamworksSharp.Native\SteamworksSharp.Native.csproj" />
   </ItemGroup>
 
 </Project>

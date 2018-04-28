@@ -1,10 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.1;netstandard2.0</TargetFrameworks>
-    <Platforms>x64</Platforms>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <TargetFrameworks>netstandard1.5;netstandard1.6;netstandard2.0;net452</TargetFrameworks>
     <Version>1.0.0</Version>
     <Authors>AeonLucid</Authors>
     <Company>AeonLucid</Company>
@@ -13,13 +10,19 @@
     <PackageProjectUrl>https://github.com/AeonLucid/SteamworksSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AeonLucid/SteamworksSharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>Steam Steamworks Netstandard</PackageTags>
+    <PackageTags>Steam Steamworks</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+  </ItemGroup>
+
   <ItemGroup>
-    <Content Include="steam_api.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="steam_api64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SteamworksSharp.Native\SteamworksSharp.Native.csproj" />
   </ItemGroup>
 
 </Project>
