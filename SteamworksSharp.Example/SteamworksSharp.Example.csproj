@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SteamworksSharp.Native.Linux_x64\SteamworksSharp.Native.Linux_x64.csproj" />
-    <ProjectReference Include="..\SteamworksSharp.Native.Windows_x64\SteamworksSharp.Native.Windows_x64.csproj" />
     <ProjectReference Include="..\SteamworksSharp\SteamworksSharp.csproj" />
   </ItemGroup>
 

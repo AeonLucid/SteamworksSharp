@@ -11,14 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{ED9B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamworksSharp.Example", "SteamworksSharp.Example\SteamworksSharp.Example.csproj", "{87679745-6166-42A7-9A28-0738CA08C5A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamworksSharp.Native.Windows_x64", "SteamworksSharp.Native.Windows_x64\SteamworksSharp.Native.Windows_x64.csproj", "{ADB96E56-1544-4760-B2B0-C2C029A0D973}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamworksSharp.Native.Linux_x64", "SteamworksSharp.Native.Linux_x64\SteamworksSharp.Native.Linux_x64.csproj", "{540F82A6-3CC2-4AAF-96AB-53875EB1319A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamworksSharp.Native.Linux_x86", "SteamworksSharp.Native.Linux_x86\SteamworksSharp.Native.Linux_x86.csproj", "{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamworksSharp.Native.Windows_x86", "SteamworksSharp.Native.Windows_x86\SteamworksSharp.Native.Windows_x86.csproj", "{5D4B73FE-934A-4629-A68F-1E11B0DB4611}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F1A6D65-B430-442D-AD5D-5950EDBBD8CF}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
@@ -46,30 +38,6 @@ Global
 		{87679745-6166-42A7-9A28-0738CA08C5A8}.Release|x64.ActiveCfg = Release|x64
 		{87679745-6166-42A7-9A28-0738CA08C5A8}.Release|x64.Build.0 = Release|x64
 		{87679745-6166-42A7-9A28-0738CA08C5A8}.Release|x86.ActiveCfg = Release|x64
-		{ADB96E56-1544-4760-B2B0-C2C029A0D973}.Debug|x64.ActiveCfg = Debug|x64
-		{ADB96E56-1544-4760-B2B0-C2C029A0D973}.Debug|x64.Build.0 = Debug|x64
-		{ADB96E56-1544-4760-B2B0-C2C029A0D973}.Debug|x86.ActiveCfg = Debug|x64
-		{ADB96E56-1544-4760-B2B0-C2C029A0D973}.Release|x64.ActiveCfg = Release|x64
-		{ADB96E56-1544-4760-B2B0-C2C029A0D973}.Release|x64.Build.0 = Release|x64
-		{ADB96E56-1544-4760-B2B0-C2C029A0D973}.Release|x86.ActiveCfg = Release|x64
-		{540F82A6-3CC2-4AAF-96AB-53875EB1319A}.Debug|x64.ActiveCfg = Debug|x64
-		{540F82A6-3CC2-4AAF-96AB-53875EB1319A}.Debug|x64.Build.0 = Debug|x64
-		{540F82A6-3CC2-4AAF-96AB-53875EB1319A}.Debug|x86.ActiveCfg = Debug|x64
-		{540F82A6-3CC2-4AAF-96AB-53875EB1319A}.Release|x64.ActiveCfg = Release|x64
-		{540F82A6-3CC2-4AAF-96AB-53875EB1319A}.Release|x64.Build.0 = Release|x64
-		{540F82A6-3CC2-4AAF-96AB-53875EB1319A}.Release|x86.ActiveCfg = Release|x64
-		{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951}.Debug|x64.ActiveCfg = Debug|x86
-		{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951}.Debug|x86.ActiveCfg = Debug|x86
-		{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951}.Debug|x86.Build.0 = Debug|x86
-		{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951}.Release|x64.ActiveCfg = Release|x86
-		{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951}.Release|x86.ActiveCfg = Release|x86
-		{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951}.Release|x86.Build.0 = Release|x86
-		{5D4B73FE-934A-4629-A68F-1E11B0DB4611}.Debug|x64.ActiveCfg = Debug|x86
-		{5D4B73FE-934A-4629-A68F-1E11B0DB4611}.Debug|x86.ActiveCfg = Debug|x86
-		{5D4B73FE-934A-4629-A68F-1E11B0DB4611}.Debug|x86.Build.0 = Debug|x86
-		{5D4B73FE-934A-4629-A68F-1E11B0DB4611}.Release|x64.ActiveCfg = Release|x86
-		{5D4B73FE-934A-4629-A68F-1E11B0DB4611}.Release|x86.ActiveCfg = Release|x86
-		{5D4B73FE-934A-4629-A68F-1E11B0DB4611}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,10 +45,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{494F7EA2-2EB2-4C76-B736-B890589D43E0} = {37C05059-BE1E-45F8-A3DA-F557D4BB79AB}
 		{87679745-6166-42A7-9A28-0738CA08C5A8} = {ED9B852D-9D2E-4A3C-B6DB-0119E8157411}
-		{ADB96E56-1544-4760-B2B0-C2C029A0D973} = {37C05059-BE1E-45F8-A3DA-F557D4BB79AB}
-		{540F82A6-3CC2-4AAF-96AB-53875EB1319A} = {37C05059-BE1E-45F8-A3DA-F557D4BB79AB}
-		{5A0A1510-B827-40A1-9EA7-4AE1D0BD7951} = {37C05059-BE1E-45F8-A3DA-F557D4BB79AB}
-		{5D4B73FE-934A-4629-A68F-1E11B0DB4611} = {37C05059-BE1E-45F8-A3DA-F557D4BB79AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E186A343-DDB4-4E06-BEC6-2746E10DB828}
