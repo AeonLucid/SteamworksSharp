@@ -23,19 +23,27 @@ environment:
 
 before_build:
   - appveyor-retry dotnet restore -v Minimal
+  - appveyor-retry dotnet restore "SteamworksSharp.Native.Linux_x64" -v Minimal
+  - appveyor-retry dotnet restore "SteamworksSharp.Native.Linux_x86" -v Minimal
+  - appveyor-retry dotnet restore "SteamworksSharp.Native.Windows_x64" -v Minimal
+  - appveyor-retry dotnet restore "SteamworksSharp.Native.Windows_x86" -v Minimal
 
 build_script:
   - dotnet build "SteamworksSharp" -c Release
+  - dotnet build "SteamworksSharp.Native.Linux_x64" -c Release
+  - dotnet build "SteamworksSharp.Native.Linux_x86" -c Release
+  - dotnet build "SteamworksSharp.Native.Windows_x64" -c Release
+  - dotnet build "SteamworksSharp.Native.Windows_x86" -c Release
   
 after_build:
   - dotnet pack "SteamworksSharp" -c Release --no-build -o artifacts
-  - nuget pack "SteamworksSharp.Native.Linux_x64" -Version %APPVEYOR_BUILD_VERSION%
-  - nuget pack "SteamworksSharp.Native.Linux_x86" -Version %APPVEYOR_BUILD_VERSION%
-  - nuget pack "SteamworksSharp.Native.Windows_x64" -Version %APPVEYOR_BUILD_VERSION%
-  - nuget pack "SteamworksSharp.Native.Windows_x86" -Version %APPVEYOR_BUILD_VERSION%
+  - dotnet pack "SteamworksSharp.Native.Linux_x64" -c Release --no-build -o artifacts
+  - dotnet pack "SteamworksSharp.Native.Linux_x86" -c Release --no-build -o artifacts
+  - dotnet pack "SteamworksSharp.Native.Windows_x64" -c Release --no-build -o artifacts
+  - dotnet pack "SteamworksSharp.Native.Windows_x86" -c Release --no-build -o artifacts
   
 artifacts:
-  - path: .\**\*.nupkg
+  - path: .\**\artifacts\*.nupkg
   
 only_commits:
   files:
