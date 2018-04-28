@@ -39,4 +39,8 @@ artifacts:
   
 only_commits:
   files:
-    - SteamworksSharp*/
+    - SteamworksSharp/
+    - SteamworksSharp.Native.Linux_x86/
+    - SteamworksSharp.Native.Linux_x64/
+    - SteamworksSharp.Native.Windows_x86/
+    - SteamworksSharp.Native.Windows_x64/
