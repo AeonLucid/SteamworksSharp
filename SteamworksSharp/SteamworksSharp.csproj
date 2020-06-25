@@ -12,6 +12,14 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseUrl>https://github.com/AeonLucid/SteamworksSharp/LICENSE</PackageLicenseUrl>
     <PackageTags>Steam Steamworks Netstandard</PackageTags>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
 </Project>
